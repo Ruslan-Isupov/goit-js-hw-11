@@ -22,12 +22,12 @@ const TOTAL_lMAGES = 500
 const form = document.querySelector("#search-form")
 const gallery = document.querySelector(".gallery")
 const buttonLoad = document.querySelector(".load-more")
-
+hide()
 
 let name = form.elements.searchQuery;
 
 
-hide()
+
 
 
  form.addEventListener("submit",findListOfPictures)
@@ -105,6 +105,7 @@ async function loadAdditionalImage(query){
      
    
    catch (error) {
+    сonsole.log(error)
     Notiflix.Notify.failure(
       "We're sorry, but you've reached the end of search results." )
     hide()
