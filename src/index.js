@@ -25,7 +25,7 @@ const buttonLoad = document.querySelector(".load-more")
 
 
 let name = form.elements.searchQuery;
-console.log(name)
+
 
 hide()
 
@@ -49,8 +49,8 @@ async function findListOfPictures(e){
     
     try{
       // console.log(name.value)
-  //  let query = name.value
-  const query = form.elements.searchQuery.value;
+   let query = name.value
+  // const query = form.elements.searchQuery.value;
    const images = await searchPictures (query)
    
     
@@ -85,8 +85,8 @@ async function findListOfPictures(e){
 async function loadAdditionalImage(query){
   
   try{
-    const query = form.elements.searchQuery.value;
-    // let query = name.value
+    // const query = form.elements.searchQuery.value;
+    let query = name.value
 
     const images = await searchPictures (query)
     
