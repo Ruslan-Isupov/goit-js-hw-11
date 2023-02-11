@@ -53,11 +53,11 @@ async function findListOfPictures(e){
    const images = await searchPictures (query)
    
     
-    if (images.total === 0 || name.value === ""){
+    // if (images.total === 0 || name.value === ""){
       
-      throw new Error()      
+    //   throw new Error()      
           
-    }
+    // }
    
       
       renderUserListItems(images)
