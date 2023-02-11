@@ -1,7 +1,7 @@
 import './css/styles.css';
 import Notiflix from 'notiflix';
-import SimpleLightbox from "simplelightbox";
-import "simplelightbox/dist/simple-lightbox.min.css";
+// import SimpleLightbox from "simplelightbox";
+// import "simplelightbox/dist/simple-lightbox.min.css";
 import {searchPictures} from "./searchPictures.js";
 
 // import {incrementPage} from "./renderFunction.js"
@@ -59,7 +59,6 @@ async function findListOfPictures(e){
    
       
       renderUserListItems(images)
-      new SimpleLightbox('.gallery a').refresh()
       notifySuccess(images)
       show()
       page += 1;

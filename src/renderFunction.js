@@ -1,8 +1,8 @@
 import Notiflix from 'notiflix';
 import { gallery } from './index.js';
 import { buttonLoad } from './index.js';
-import SimpleLightbox from "simplelightbox";
-import "simplelightbox/dist/simple-lightbox.min.css";
+// import SimpleLightbox from "simplelightbox";
+// import "simplelightbox/dist/simple-lightbox.min.css";
 
 
 
@@ -36,7 +36,7 @@ function renderUserListItems(images) {
 
   gallery.insertAdjacentHTML("beforeend",markup);
   // new SimpleLightbox('.gallery a').refresh()
-
+  
 
 }
 
