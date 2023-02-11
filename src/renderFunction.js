@@ -10,7 +10,7 @@ function renderUserListItems(images) {
   
   
 
-  markup = images.hits
+  const markup = images.hits
       .map(
         image => `
 <div class="photo-card">
