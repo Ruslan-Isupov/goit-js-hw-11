@@ -71,7 +71,7 @@ async function findListOfPictures(e){
     
   }
       catch(error) {
-        
+        сonsole.log(error)
         clearMarkup()
         Notiflix.Notify.failure(
           'Sorry, there are no images matching your search query. Please try again.'
