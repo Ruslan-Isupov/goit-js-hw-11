@@ -59,6 +59,7 @@ async function findListOfPictures(e){
    
       
       renderUserListItems(images)
+      new SimpleLightbox('.gallery a').refresh()
       notifySuccess(images)
       show()
       page += 1;

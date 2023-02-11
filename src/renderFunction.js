@@ -35,8 +35,8 @@ function renderUserListItems(images) {
 </div>`).join('');
 
   gallery.insertAdjacentHTML("beforeend",markup);
-  new SimpleLightbox('.gallery a').refresh()
-  
+  // new SimpleLightbox('.gallery a').refresh()
+
 
 }
 
