@@ -56,7 +56,7 @@ async function findListOfPictures(e){
     
     if (images.total === 0 || name.value === ""){
       
-      throw new Error()      
+      throw new Error(error)      
           
     }
    
@@ -105,7 +105,7 @@ async function loadAdditionalImage(query){
      
    
    catch (error) {
-    сonsole.log(error)
+    // сonsole.log(error)
     Notiflix.Notify.failure(
       "We're sorry, but you've reached the end of search results." )
     hide()
