@@ -1,18 +1,13 @@
 import Notiflix from 'notiflix';
 import { gallery } from './index.js';
 import { buttonLoad } from './index.js';
-import SimpleLightbox from "simplelightbox";
-import "simplelightbox/dist/simple-lightbox.min.css";
-
-
+import SimpleLightbox from 'simplelightbox';
+import 'simplelightbox/dist/simple-lightbox.min.css';
 
 function renderUserListItems(images) {
-  
-  
-
   const markup = images.hits
-      .map(
-        image => `
+    .map(
+      image => `
 <div class="photo-card">
 <a class="gallery__item"  href="${image.largeImageURL}" >
   <img src="${image.webformatURL}" alt="${image.tags}"  />
@@ -32,55 +27,31 @@ function renderUserListItems(images) {
   <b>${image.downloads}</b>
 </p>
   </div>
-</div>`).join('');
+</div>`
+    )
+    .join('');
 
-  gallery.insertAdjacentHTML("beforeend",markup);
-  new SimpleLightbox('.gallery a').refresh()
-  
-
+  gallery.insertAdjacentHTML('beforeend', markup);
+  new SimpleLightbox('.gallery a').refresh();
 }
-
-
 
 function clearMarkup() {
   gallery.innerHTML = '';
 }
 
 function hide() {
-  buttonLoad.classList.add("unvisible-button")
+  buttonLoad.classList.add('unvisible-button');
 }
 
 function show() {
-  buttonLoad.classList.remove("unvisible-button")
+  buttonLoad.classList.remove('unvisible-button');
 }
 
-
-function notifySuccess(images){
-  if (images.total !== 0){
-  Notiflix.Notify.success(
-  `Hooray ! We found ${images.totalHits} images`
-)};
+function notifySuccess(images) {
+  if (images.total !== 0) {
+    Notiflix.Notify.success(`Hooray ! We found ${images.totalHits} images`);
+  }
 }
 
-
-
-
-
-
-// const gallery = new SimpleLightbox('.gallery a', { captionsData: 'alt', captionDelay : 250});
-
-
-export {renderExtraImage};
-export { renderUserListItems };
-export { clearMarkup };
-export {hide};
-export {show};
-export {notifySuccess};
-export {incrementPage};
-export {resetpage};
-
-
-
-
-
+export { renderExtraImage,renderUserListItems,clearMarkup,hide,show,notifySuccess };
 
