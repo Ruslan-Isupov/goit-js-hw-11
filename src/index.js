@@ -12,8 +12,6 @@ import {
 let page = 1;
 let limit = 40;
 
-const TOTAL_lMAGES = 500;
-
 const form = document.querySelector('#search-form');
 const gallery = document.querySelector('.gallery');
 const buttonLoad = document.querySelector('.load-more');
@@ -45,7 +43,11 @@ async function findListOfPictures(e) {
 
     renderUserListItems(images);
     notifySuccess(images);
-    show();
+
+    if (limit < images.totalHits) {
+      show();
+    }
+
     page += 1;
     limit += 40;
   } catch (error) {
@@ -67,7 +69,7 @@ async function loadAdditionalImage(query) {
     page += 1;
     limit += 40;
 
-    if (limit >= TOTAL_lMAGES) {
+    if (limit >= images.totalHits) {
       throw new Error(images.status);
     }
   } catch (error) {

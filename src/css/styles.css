@@ -3,7 +3,6 @@
 }
 
 body {
- 
   height: auto;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
     Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -13,78 +12,70 @@ body {
   color: #212121;
   line-height: 1.5;
 }
-.search-form{
-  
- 
+.search-form {
   width: 1160px;
   padding: 15px;
 
   text-align: center;
-  margin: 0 auto; 
+  margin: 0 auto;
   background-color: blanchedalmond;
   border-radius: 15px;
 }
-input{
+input {
   display: inline;
 
   border-radius: 10px;
-  border:solid 4px #f8c6c6;
+  border: solid 4px #f8c6c6;
   padding: 10px;
   outline: #f8c6c6;
 }
-input:hover,input:focus{
-  border:solid 4px #ecb0b0;
+input:hover,
+input:focus {
+  border: solid 4px #ecb0b0;
 }
 button {
   display: block;
   padding: 15px 25px;
-  background-color:rgb(233, 212, 212) ;
-  border-radius:20px ;
+  background-color: rgb(233, 212, 212);
+  border-radius: 20px;
   border: rgb(247, 206, 206);
   color: rgb(83, 83, 83);
   margin: 0 auto;
 }
-button[type="submit"]{
+button[type='submit'] {
   display: inline;
-
 }
 button:hover {
-  cursor:pointer;
+  cursor: pointer;
   background-color: rgb(243, 216, 183);
 }
 
-img{
-    
-    height: 240px;
-    width: 300px;
-    object-fit: cover;
-    
-  }
+img {
+  height: 240px;
+  width: 300px;
+  object-fit: cover;
+}
 
-.gallery{
-  
-  
-    margin: 0 auto;
-    padding: 15px 15px 0 15px;
+.gallery {
+  margin: 0 auto;
+  padding: 15px 15px 0 15px;
   display: flex;
   flex-wrap: wrap;
-  gap : 10px;
+  gap: 10px;
   justify-content: space-between;
-  
 }
-.unvisible-button{
+.unvisible-button {
   display: none;
-  
 }
-.info{
-  margin : 10px;
+.info {
+  margin: 10px;
   display: flex;
   gap: 10px;
   text-align: center;
 }
-.info-item{
+.info-item {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 10px
+  gap: 10px;
 }

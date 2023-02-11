@@ -53,5 +53,11 @@ function notifySuccess(images) {
   }
 }
 
-export { renderExtraImage,renderUserListItems,clearMarkup,hide,show,notifySuccess };
-
+export {
+  renderExtraImage,
+  renderUserListItems,
+  clearMarkup,
+  hide,
+  show,
+  notifySuccess,
+};
