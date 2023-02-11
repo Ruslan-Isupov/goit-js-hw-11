@@ -48,16 +48,17 @@ async function findListOfPictures(e){
      
     
     try{
-      console.log(name.value)
-   let query = name.value
+      // console.log(name.value)
+  //  let query = name.value
+  const query = form.elements.searchQuery.value;
    const images = await searchPictures (query)
    
     
-    // if (images.total === 0 || name.value === ""){
+    if (images.total === 0 || name.value === ""){
       
-    //   throw new Error()      
+      throw new Error()      
           
-    // }
+    }
    
       
       renderUserListItems(images)
@@ -83,7 +84,9 @@ async function findListOfPictures(e){
 
 async function loadAdditionalImage(query){
   
-  try{let query = name.value
+  try{
+    const query = form.elements.searchQuery.value;
+    // let query = name.value
 
     const images = await searchPictures (query)
     
